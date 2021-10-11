@@ -15,22 +15,31 @@
 <body>
     <header>
         <div class="logo_e_pesquisa">
-            <a href="">
-                <img src="<?php echo get_stylesheet_directory_uri() ?>/img/logo.png">
-            </a>
-            <div class="caixadepesquisa">
+            <div class="logo">
                 <a href="">
-                    <div class="lupinha">
-                        <img src = "<?php echo get_stylesheet_directory_uri() ?>/img/lupa.png">
-                    </div>
+                <img src="<?php echo get_stylesheet_directory_uri() ?>/img/logo.png" width="70" height="50">
+                </a>
+            </div>
+            <a href="">
+            <div class="caixadepesquisa">
+                <div class="lupinhaetxt">
+                    <img src= "<?php echo get_stylesheet_directory_uri() ?>/img/lupa.png" id="lupa">
+                    </a>
                     <input type="text" id="search">
+                </div>
+            </div>
+        </div>
+        <div class="faca_pedido_icones">
+            <button id="fazerpedido"> Faça um pedido</button>
+            <div class="carrinho">
+                <a href="">
+                <img src="<?php echo get_stylesheet_directory_uri() ?>/img/carrinho.png" width = "48" height="42" href="">  
+                </a>
+            </div>
+            <div class="perfil">
+                <a href="">
+                <img src="<?php echo get_stylesheet_directory_uri() ?>/img/perfil.png" width = "35" height="35" href="">
                 </a>
             </div>
         </div>
-        <a href="">
-            <div class="caixafazerpedido">
-                <a href="" id="fazerpedido"> Faça um pedido</a>
-            <div> 
-        </a>
-
     </header>
