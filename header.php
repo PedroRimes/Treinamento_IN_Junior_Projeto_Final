@@ -8,15 +8,20 @@
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;500&display=swap" rel="stylesheet">
-    <title>Adote um lobinho</title>
+    <title>Trabalhofinal</title>
     <?php wp_head(); ?>
 </head>
 
 <body>
     <header>
-        <a href="http://wpaulinha.local/index/">
+        <a href="">
             <img src="<?php echo get_stylesheet_directory_uri() ?>/img/logo.png">
         </a>
-        <a class="links-header2" href="http://wpaulinha.local/index/quem_somos/">Quem Somos</a>
+        <div class="textbox">
+            <a href="".
+                <div class="lupinha">
+                    <img src = "./img/lupa.png">
+                </div>
+                
+        <a class="links-header2" href="">Quem Somos</a>
     </header>
