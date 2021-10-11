@@ -14,14 +14,23 @@
 
 <body>
     <header>
+        <div class="logo_e_pesquisa">
+            <a href="">
+                <img src="<?php echo get_stylesheet_directory_uri() ?>/img/logo.png">
+            </a>
+            <div class="caixadepesquisa">
+                <a href="">
+                    <div class="lupinha">
+                        <img src = "<?php echo get_stylesheet_directory_uri() ?>/img/lupa.png">
+                    </div>
+                    <input type="text" id="search">
+                </a>
+            </div>
+        </div>
         <a href="">
-            <img src="<?php echo get_stylesheet_directory_uri() ?>/img/logo.png">
+            <div class="caixafazerpedido">
+                <a href="" id="fazerpedido"> Faça um pedido</a>
+            <div> 
         </a>
-        <div class="textbox">
-            <a href="".
-                <div class="lupinha">
-                    <img src = "./img/lupa.png">
-                </div>
-                
-        <a class="links-header2" href="">Quem Somos</a>
+
     </header>
