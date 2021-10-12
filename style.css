@@ -79,9 +79,6 @@ header {
 input[type="text"]:focus {     
     outline:none; 
 }
-body{
-    background-color: rgb(231,250,254)
-}
 footer{
     position:relative;
     bottom: 0;
@@ -126,14 +123,14 @@ footer{
 
 .parte_azul_bb{
     height: 65em;
+    background-color: rgb(231,250,254)
 }
 .texto{
     text-align: center;
+    padding-top: 2.5em;
     font-family: "Bellota Text";
     font-weight: 400;
     font-size: 32px;
-    margin-top: 3em;
-    margin-bottom: 4em;
 }
 .txttipos{
     font-family: "Bellota Text";
@@ -142,4 +139,40 @@ footer{
 }
 .categorias{
     margin-left: 12;
+}
+
+/*/////////////////////////////// SUB FOOTER //////////////////////////*/
+
+.sub-footer{
+    background-color: #7a247d;
+    height: 36em;
+}
+.vnlf{
+    font-family: "Bellota Text";
+    font-weight: 400;
+    font-size: 32px;
+    color: #FAFAFA;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 35px;
+    padding-bottom: 52px;
+}
+.end_e_slide{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+.mapa_end{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 18px;
+}
+.endereço{
+    padding-top: 25px;
+    padding-bottom: 21px;
 }
