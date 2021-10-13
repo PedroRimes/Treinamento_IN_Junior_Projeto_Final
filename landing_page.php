@@ -44,46 +44,47 @@
                                 $thumbnail_id = get_woocommerce_term_meta($category->term_id, 'thumbnail_id', true);
                                 $image = wp_get_attachment_url($thumbnail_id);
                                 echo "<div class = 'card-categorias'>
-                                        <img src='{$image}' alt='' id='imgcat'></img>
-                                        <p>{$category->name}</p>
+                                        <a href = '". get_permalink($category->)."'><img src='{$image}' class='imgcat'></img></a>
+                                        <p class='nomecat'>{$category->name}</p>
                                     </div>";
                             }
                         } 
                     ?>
                     
                 </div>
-                <h3 class="h3index"> Pratos do dia de hoje: </h3>
+                <h3 class="textododia"> Pratos do dia de hoje: </h3>
+            </div>            
+            <div class="boxpratosdodia">
+                <div class="dia">
+                    <?php   
+                    setlocale(LC_ALL, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
+                    date_default_timezone_set('America/Sao_Paulo');
+                    $day=strftime(ucwords("%w",time()));
+                    switch ($day) {
+                        case 0:
+                            echo "DOMINGO";
+                            break;
+                        case 1:
+                            echo "SEGUNDA";
+                            break;
+                        case 2:
+                            echo "TERÇA";
+                            break;
+                        case 3:
+                            echo "QUARTA";
+                            break;
+                        case 4:
+                            echo "QUINTA";
+                            break;
+                        case 5:
+                            echo "SEXTA";
+                            break;
+                        case 6:
+                            echo "SÁBADO";
+                            break;
                         
-            <div id="diadasemana">
-            <?php   
-                setlocale(LC_ALL, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
-                date_default_timezone_set('America/Sao_Paulo');
-                $day=strftime(ucwords("%w",time()));
-                switch ($day) {
-                    case 0:
-                        echo "DOMINGO";
-                        break;
-                    case 1:
-                        echo "SEGUNDA";
-                        break;
-                    case 2:
-                        echo "TERÇA";
-                        break;
-                    case 3:
-                        echo "QUARTA";
-                        break;
-                    case 4:
-                        echo "QUINTA";
-                        break;
-                    case 5:
-                        echo "SEXTA";
-                        break;
-                    case 6:
-                        echo "SÁBADO";
-                        break;
-                    
-                }
-                ?>
+                    }
+                    ?>
                 </div>
                 <div class="categoriashome">
                 <?php 
@@ -105,14 +106,14 @@
                         $imagem = woocommerce_get_product_thumbnail();
                         $titulo = get_the_title();
                         $preco = wc_price($product->get_price_including_tax(1,$product->get_price()));;  
-                        echo "<div class = 'diadasemanaEFotos'>
+                        echo "<div class = 'boxfotosedia'>
                         <img {$imagem}</img>
-                        <div id = 'captiondiadasemana'>
-                        <p>{$titulo}</p>
-                        <div id='precoECart'>
-                        <p>{$preco}</p> 
-                        <button id = 'addToCartBut'></button>
-                        </div>
+                        <div id = 'subcontainer'>
+                            <p id='Nomedoprato'>{$titulo}</p>
+                            <div id='precoecarrinho'>
+                                <p>{$preco}</p> 
+                                <a href ='".get_permalink( )."'><img src='" . get_stylesheet_directory_uri() . "/img/carrinhomais.png' width='48' height='43' id = 'botaocarrinho'></a>
+                            </div>
                         </div>
                         
                         </div>";
@@ -121,8 +122,10 @@
                 
                     wp_reset_query();
                 ?>
-                    </div>
                 </div>
+            </div>
+            <div class="boxveja">
+                <button class="vejaoutrasopbox"> Veja outras opções</button>
             </div>
         </section>
         <section class="sub-footer">
