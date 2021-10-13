@@ -141,6 +141,17 @@ footer{
     margin-left: 12;
 }
 
+/*//////////////////////////// categorias //////////////////////////*/
+
+.box-categorias{
+    display: flex;
+    justify-content: space-around;
+}
+#imgcat{
+    width: 240px;
+    height: 210px;
+}
+
 /*/////////////////////////////// SUB FOOTER //////////////////////////*/
 
 .sub-footer{

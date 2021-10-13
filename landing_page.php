@@ -43,10 +43,10 @@
                             foreach($categories as $category){
                                 $thumbnail_id = get_woocommerce_term_meta($category->term_id, 'thumbnail_id', true);
                                 $image = wp_get_attachment_url($thumbnail_id);
-                                echo "<div class = 'box-categorias'>
-                                <img src='{$image}' alt=''></img>
-                                <p>{$category->name}</p>
-                                </div>";
+                                echo "<div class = 'card-categorias'>
+                                        <img src='{$image}' alt='' id='imgcat'></img>
+                                        <p>{$category->name}</p>
+                                    </div>";
                             }
                         } 
                     ?>
