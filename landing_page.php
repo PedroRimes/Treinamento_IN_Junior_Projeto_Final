@@ -38,9 +38,23 @@
                         (XX) XXXX-XXXX
                     </div> 
                 </div>
-                <div class="slide-imagens">
-                <img src="<?php echo get_stylesheet_directory_uri() ?>/img/fotocomendo1.jpg" >
-                </div>
+                <ul class="slide-imagens">
+                    <li>
+                        <input type="radio" id="slide1" name="slidef" checked>
+                        <label for="slide1"></label>
+                        <img src="<?php echo get_stylesheet_directory_uri() ?>/img/fotocomendo1.jpg">
+                    </li>
+                    <li>
+                        <input type="radio" id="slide2" name="slidef" checked>
+                        <label for="slide2"></label>
+                        <img src="<?php echo get_stylesheet_directory_uri() ?>/img/fotocomendo2.jpg">
+                    </li>
+                    <li>
+                        <input type="radio" id="slide3" name="slidef" checked>
+                        <label for="slide3"></label>
+                        <img src="<?php echo get_stylesheet_directory_uri() ?>/img/fotocomendo3.jpg">
+                    </li>
+                </ul>
             </div>
         </section>
     </main>

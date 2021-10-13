@@ -35,7 +35,7 @@ header {
     height: 18.7px;
     width: 18.7px;
     margin-right: 10.29px;
-    margin-left:9px
+    margin-left:3px
 }
 #search{
     width: 390px;
@@ -136,6 +136,7 @@ footer{
     font-family: "Bellota Text";
     font-weight: 700;
     font-size: 24px;
+    padding-top: 48px;
 }
 .categorias{
     margin-left: 12;
@@ -162,17 +163,87 @@ footer{
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 .mapa_end{
     display: flex;
     flex-direction: column;
-    align-items: center;
     font-family: "Roboto";
     font-weight: 400;
     font-size: 18px;
+    padding-top: 23px;
+    color: #FAFAFA;
 }
 .endereço{
     padding-top: 25px;
     padding-bottom: 21px;
+}
+
+/*/////////////////////////////// slide imagens sub footer //////////////// */
+
+.slide-imagens input {
+    display: none;
+}
+.slide-imagens {
+    display: flex;
+    height: 393px;
+    width: 500px;
+    position: relative;
+}
+
+.slide-imagens li {
+    list-style: none;
+    position: absolute;
+}
+
+.slide-imagens img {
+    margin: auto;
+    height: 349px;
+    width: 593px;
+    vertical-align: top;
+}
+.slide-imagens label {
+    background-color: #FAFAFA;
+    bottom: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    display:block;
+    height: 25px;
+    position: absolute;
+    width: 25px;
+    z-index: 10;
+}
+
+.slide-imagens  li:nth-child(1) label {
+    left: 255px;
+}
+
+.slide-imagens  li:nth-child(2) label {
+    left: 285px;
+}
+
+.slide-imagens  li:nth-child(3) label {
+    left: 315px;
+}
+.slide-imagens  img {
+    opacity: 0;
+    visibility: hidden;
+}
+.slide-imagens  p {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.slide-imagens  li input:checked ~ img {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
+.slide-imagens  li input:checked ~ p {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
+.slide-imagens  li input:checked ~ label {
+    background-color: black;
 }

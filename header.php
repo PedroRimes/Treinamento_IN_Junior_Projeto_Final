@@ -23,6 +23,7 @@
             <a href="">
             <div class="caixadepesquisa">
                 <div class="lupinhaetxt">
+                    <a href="">
                     <img src= "<?php echo get_stylesheet_directory_uri() ?>/img/lupa.png" id="lupa">
                     </a>
                     <input type="text" id="search">
