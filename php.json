@@ -1,0 +1,18 @@
+{
+    "Bloco PHP em linha": {
+        "prefix": "<?p",
+        "body": [
+            "<?php ?>"
+        ],
+        "description": "Completa bloco de php em linha"
+    },
+    "Bloco PHP pulando linha": {
+        "prefix": "<?ph",
+        "body": [
+            "<?php ",
+            "",
+            "?>"
+        ],
+        "description": "Completa bloco de php pulando uma linha"
+    }
+}

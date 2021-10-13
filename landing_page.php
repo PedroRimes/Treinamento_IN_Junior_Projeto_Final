@@ -1,4 +1,5 @@
 <?php /* Template Name: Pagina principal */ ?>
+
 <?php get_header(); ?>
     <main>
         <section class="texto_principal">
@@ -17,8 +18,110 @@
                 <div class="txttipos">
                     Tipos de pratos principais
                 </div>
-                <div class="">
+                <div class="box-categorias">
+                <?php 
+                        $taxonomy     = 'product_cat';
+                        $orderby      = 'name';  
+                        $show_count   = 0;      // 1 for yes, 0 for no
+                        $pad_counts   = 0;      // 1 for yes, 0 for no
+                        $hierarchical = 1;      // 1 for yes, 0 for no  
+                        $title        = '';  
+                        $empty        = 1;
+
+                        $args = array(
+                                'taxonomy'     => $taxonomy,
+                                'orderby'      => $orderby,
+                                'show_count'   => $show_count,
+                                'pad_counts'   => $pad_counts,
+                                'hierarchical' => $hierarchical,
+                                'title_li'     => $title,
+                                'hide_empty'   => $empty
+                        );
+
+                        $categories = get_categories($args);
+                        if($categories){
+                            foreach($categories as $category){
+                                $thumbnail_id = get_woocommerce_term_meta($category->term_id, 'thumbnail_id', true);
+                                $image = wp_get_attachment_url($thumbnail_id);
+                                echo "<div class = 'box-categorias'>
+                                <img src='{$image}' alt=''></img>
+                                <p>{$category->name}</p>
+                                </div>";
+                            }
+                        } 
+                    ?>
                     
+                </div>
+                <h3 class="h3index"> Pratos do dia de hoje: </h3>
+                        
+            <div id="diadasemana">
+            <?php   
+                setlocale(LC_ALL, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
+                date_default_timezone_set('America/Sao_Paulo');
+                $day=strftime(ucwords("%w",time()));
+                switch ($day) {
+                    case 0:
+                        echo "DOMINGO";
+                        break;
+                    case 1:
+                        echo "SEGUNDA";
+                        break;
+                    case 2:
+                        echo "TERÇA";
+                        break;
+                    case 3:
+                        echo "QUARTA";
+                        break;
+                    case 4:
+                        echo "QUINTA";
+                        break;
+                    case 5:
+                        echo "SEXTA";
+                        break;
+                    case 6:
+                        echo "SÁBADO";
+                        break;
+                    
+                }
+                ?>
+                </div>
+                <div class="categoriashome">
+                <?php 
+                        
+                    setlocale(LC_ALL, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
+                    date_default_timezone_set('America/Sao_Paulo');
+                    $day=strftime(ucwords("%a",time()));
+
+                    $args = array(
+                        'post_type'      => 'product',
+                        'posts_per_page' => 4,
+                        'product_tag'       => $day,
+                    );
+                
+                    $loop = new WP_Query( $args );
+                
+                    while ( $loop->have_posts() ) : $loop->the_post();
+                        global $product;
+                        $imagem = woocommerce_get_product_thumbnail();
+                        $titulo = get_the_title();
+                        $preco = wc_price($product->get_price_including_tax(1,$product->get_price()));;  
+                        echo "<div class = 'diadasemanaEFotos'>
+                        <img {$imagem}</img>
+                        <div id = 'captiondiadasemana'>
+                        <p>{$titulo}</p>
+                        <div id='precoECart'>
+                        <p>{$preco}</p> 
+                        <button id = 'addToCartBut'></button>
+                        </div>
+                        </div>
+                        
+                        </div>";
+                        
+                    endwhile;
+                
+                    wp_reset_query();
+                ?>
+                    </div>
                 </div>
             </div>
         </section>
