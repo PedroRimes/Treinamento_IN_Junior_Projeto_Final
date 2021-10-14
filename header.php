@@ -26,6 +26,7 @@
                     <form action="<?php echo bloginfo("url");?>/product/" method="get">
                         <input type="image" src="<?php echo get_stylesheet_directory_uri()?>/img/lupa.png" id="lupa">
                         <input type="text" name="s" cat="s" placeholder="Pesquisar..." value="<?php echo the_search_query( )?>" id="search" required>
+                        <input type="text" name="post-type" value="product" class="hidden">
                     </form>
                 </div>
             </div>
@@ -34,9 +35,17 @@
             <button id="fazerpedido"> Faça um pedido</button>
             <div class="carrinho">
                 <a href="">
-                <img src="<?php echo get_stylesheet_directory_uri() ?>/img/carrinho.png" width = "48" height="42" href="">  
+                    <img src="<?php echo get_stylesheet_directory_uri() ?>/img/carrinho.png" width = "48" height="42" href="">  
+                    <div id="mySidenav" class="sidenav">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <a href="#">About</a>
+                        <a href="#">Services</a>
+                        <a href="#">Clients</a>
+                        <a href="#">Contact</a>
+                    </div>
                 </a>
             </div>
+            <span onclick="openNav()"></span>
             <div class="perfil">
                 <a href="">
                 <img src="<?php echo get_stylesheet_directory_uri() ?>/img/perfil.png" width = "35" height="35" href="">
