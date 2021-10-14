@@ -25,7 +25,7 @@
                 <div class="lupinhaetxt">
                     <form action="<?php echo bloginfo("url");?>/product/" method="get">
                         <input type="image" src="<?php echo get_stylesheet_directory_uri()?>/img/lupa.png" id="lupa">
-                        <input type="text" name="s" cat="s" placeholder="Pesquisar..." value="<?php echo the_search_query()?>" id="search">
+                        <input type="text" name="s" cat="s" placeholder="Pesquisar..." value="<?php echo the_search_query( )?>" id="search" required>
                     </form>
                 </div>
             </div>

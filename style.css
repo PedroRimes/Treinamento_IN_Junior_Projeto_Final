@@ -47,7 +47,15 @@ header {
     border: none;
     height: 1em;
 }
-
+#search ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #F5C661;
+    opacity: 1; /* Firefox */
+    font-weight: 300;
+}
+#search ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #F5C661;
+    font-weight: 300;
+}
 /*///////////////////////// faça um pedido e imagem /////////////////////////*/
 
 .faca_pedido_icones{
@@ -385,3 +393,4 @@ footer{
 .slide-imagens  li input:checked ~ label {
     background-color: black;
 }
+
