@@ -32,20 +32,15 @@
             </div>
         </div>
         <div class="faca_pedido_icones">
-            <button id="fazerpedido"> Faça um pedido</button>
-            <div class="carrinho">
-                <a href="">
-                    <img src="<?php echo get_stylesheet_directory_uri() ?>/img/carrinho.png" width = "48" height="42" href="">  
-                    <div id="mySidenav" class="sidenav">
-                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                        <a href="#">About</a>
-                        <a href="#">Services</a>
-                        <a href="#">Clients</a>
-                        <a href="#">Contact</a>
-                    </div>
-                </a>
+            <button href="http://trabalhofinal.local/shop" id="fazerpedido"> Faça um pedido</button>
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             </div>
-            <span onclick="openNav()"></span>
+            <span onclick="openNav()">
+                <div class="carrinho">
+                        <img src="<?php echo get_stylesheet_directory_uri() ?>/img/carrinho.png" width = "48" height="42" href="">  
+                </div>
+            </span>
             <div class="perfil">
                 <a href="">
                 <img src="<?php echo get_stylesheet_directory_uri() ?>/img/perfil.png" width = "35" height="35" href="">
