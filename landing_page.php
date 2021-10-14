@@ -44,7 +44,7 @@
                                 $thumbnail_id = get_woocommerce_term_meta($category->term_id, 'thumbnail_id', true);
                                 $image = wp_get_attachment_url($thumbnail_id);
                                 echo "<div class = 'card-categorias'>
-                                        <a href = '". get_permalink($category->)."'><img src='{$image}' class='imgcat'></img></a>
+                                        <a href = '". get_term_link($category->slug, 'product_cat')."'><img src='{$image}' class='imgcat'></img></a>
                                         <p class='nomecat'>{$category->name}</p>
                                     </div>";
                             }

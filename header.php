@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title><?php bloginfo('Comes&Bebes')?><?php wp_title('|'); ?></title>
     <title>Trabalhofinal</title>
     <?php wp_head(); ?>
 </head>
@@ -16,17 +17,16 @@
     <header>
         <div class="logo_e_pesquisa">
             <div class="logo">
-                <a href="">
+                <a href="http://trabalhofinal.local">
                 <img src="<?php echo get_stylesheet_directory_uri() ?>/img/logo.png" width="70" height="50">
                 </a>
             </div>
-            <a href="">
             <div class="caixadepesquisa">
                 <div class="lupinhaetxt">
-                    <a href="">
-                    <img src= "<?php echo get_stylesheet_directory_uri() ?>/img/lupa.png" id="lupa">
-                    </a>
-                    <input type="text" id="search">
+                    <form action="<?php echo bloginfo("url");?>/product/" method="get">
+                        <input type="image" src="<?php echo get_stylesheet_directory_uri()?>/img/lupa.png" id="lupa">
+                        <input type="text" name="s" cat="s" placeholder="Pesquisar..." value="<?php echo the_search_query()?>" id="search">
+                    </form>
                 </div>
             </div>
         </div>
