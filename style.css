@@ -135,7 +135,11 @@ body{
     margin-right: 40px;
     padding-top: 37px;
     padding-bottom: 68px;
+
 }
+
+/*/////////////////////////resto header //////////////////////////*/
+
 #main {
     transition: margin-left .7s;
     padding: 20px;
@@ -176,6 +180,8 @@ input[type="text"]:focus {
 .boxbotcomprar{
     display:flex;
     justify-content:center;
+    align-content: center;
+    padding-top: 1em;
 }
 #botcomprar{
     font-family: 'Bellota Text';

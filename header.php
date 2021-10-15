@@ -36,22 +36,19 @@
                 <button id="fazerpedido"> Faça um pedido</button>
             </a>
             <div id="mySidenav" class="sidenav">
-                <div class="forasidebar">
-                    <div class="active"></div>
-                </div>
+
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                
                 <div id="box-carrinho">
                     CARRINHO
                 </div>
                 <div id="box-produt-cart">
-                    ola
-                </div>
-                <div id="totcar">
-                    Total do Carrinho: R$
+                    <?php do_action('cart')?>
                 </div>
                 <div class="boxbotcomprar">
-                    <button id="botcomprar">COMPRAR</button>
+                    <a id="botcomprar" href="http://trabalhofinal.local/checkout/">COMPRAR</a>
                 </div>
+
             </div>
             <span onclick="openNav()">
                 <div class="carrinho">
