@@ -32,18 +32,25 @@
             </div>
         </div>
         <div class="faca_pedido_icones">
-            <button href="http://trabalhofinal.local/shop" id="fazerpedido"> Faça um pedido</button>
+            <a href="http://trabalhofinal.local/shop">
+                <button id="fazerpedido"> Faça um pedido</button>
+            </a>
             <div id="mySidenav" class="sidenav">
+                <div class="forasidebar">
+                    <div class="active"></div>
+                </div>
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div id="box-carrinho">
+                </div>
             </div>
             <span onclick="openNav()">
                 <div class="carrinho">
-                        <img src="<?php echo get_stylesheet_directory_uri() ?>/img/carrinho.png" width = "48" height="42" href="">  
+                    <img src="<?php echo get_stylesheet_directory_uri() ?>/img/carrinho.png" width = "35" height="35">  
                 </div>
             </span>
             <div class="perfil">
-                <a href="">
-                <img src="<?php echo get_stylesheet_directory_uri() ?>/img/perfil.png" width = "35" height="35" href="">
+                <a href="http://trabalhofinal.local/my-account">
+                    <img src="<?php echo get_stylesheet_directory_uri() ?>/img/perfil.png" width = "35" height="35" href="">
                 </a>
             </div>
         </div>

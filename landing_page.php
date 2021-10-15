@@ -107,15 +107,14 @@
                         $titulo = get_the_title();
                         $preco = wc_price($product->get_price_including_tax(1,$product->get_price()));;  
                         echo "<div class = 'boxfotosedia'>
-                        <img {$imagem}</img>
-                        <div id = 'subcontainer'>
-                            <p id='Nomedoprato'>{$titulo}</p>
-                            <div id='precoecarrinho'>
-                                <p>{$preco}</p> 
-                                <a href ='".get_permalink( )."'><img src='" . get_stylesheet_directory_uri() . "/img/carrinhomais.png' width='48' height='43' id = 'botaocarrinho'></a>
+                            <img {$imagem}</img>
+                            <div id = 'subcontainer'>
+                                <p id='Nomedoprato'>{$titulo}</p>
+                                <div id='precoecarrinho'>
+                                    <p>{$preco}</p> 
+                                    <a href ='".get_permalink( )."'><img src='" . get_stylesheet_directory_uri() . "/img/carrinhomais.png' width='48' height='43' id = 'botaocarrinho'></a>
+                                </div>
                             </div>
-                        </div>
-                        
                         </div>";
                         
                     endwhile;
@@ -125,7 +124,9 @@
                 </div>
             </div>
             <div class="boxveja">
-                <button class="vejaoutrasopbox"> Veja outras opções</button>
+                <a href = "http://trabalhofinal.local/shop">
+                    <button class="vejaoutrasopbox"> Veja outras opções</button>
+                </a>
             </div>
         </section>
         <section class="sub-footer">
