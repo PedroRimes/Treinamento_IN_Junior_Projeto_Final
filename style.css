@@ -99,13 +99,13 @@ body{
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 12; 
+    z-index: 100000000; 
     top: 0;
     right: 0;
     background-color: #F5C661; 
     overflow-x: hidden; 
-    padding-top: 60px;
     transition: 0.5s;
+    padding-top: 60px;
 }
 .sidenav a {
     padding: 8px 8px 8px 70px;
@@ -136,6 +136,102 @@ body{
     padding-top: 37px;
     padding-bottom: 68px;
 
+}
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+#palavraCarrinho{
+    font-family: 'Bellota Text', cursive;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 40px;
+
+    color: #6A066D;
+
+    margin-left: 2.438rem;
+    margin-bottom: 0.469rem;
+}
+#box-produt-cart{
+    display:flex;
+    flex-direction:column;
+    border-bottom: 0;
+}
+#itensCarrinho{
+    height: 100px;
+    margin-left: 2.563rem;
+    margin-top: 2.367rem;
+    margin-right: 2.563rem;
+
+    object-fit: contain;
+
+    display:flex;
+    flex-direction:row;
+
+    overflow: hidden;
+
+    background: #D7F6FD;
+}
+#imagemBonitaCarrinho > img{
+    object-fit: contain;
+    height:100px;
+    width:100px;
+
+}
+.produto-info{
+    background: #D7F6FD;
+
+    font-family: 'Bellota Text', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+
+    color: #000000;
+}
+#precoCarrinho{
+    font-family: 'Bellota Text', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    
+    color: #000000;
+    
+    padding-top:1.484rem;
+    border-top: 1px solid #6A066D;
+    margin-top: 4.262rem;
+    margin-left: 2.563rem;
+    padding-bottom: 0.701rem;
+}
+#botcomprar{
+    width: 245px;
+    height: 41px;
+    padding-left: 0;
+
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 142px;
+
+    background: rgba(126, 52, 129, 0.86279);
+
+    font-family: 'Bellota Text', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 30px;
+    
+    color: #FFFFFF;
+}
+#breu{
+    z-index: 20;
+    position: fixed;
+    width:0;
+    height: 100%;
+
+    background-color: rgba(0,0,0,0.4);
 }
 
 /*/////////////////////////resto header //////////////////////////*/
