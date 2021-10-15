@@ -9,6 +9,13 @@ Version: 1
 @import url('https://fonts.googleapis.com/css2?family=Bellota+Text:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap');
 
+#opacity{
+    height:100%;
+    width:0;
+    position:fixed;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index:11;
+}
 header{
     background-color: #7a247d;
     display: flex;
@@ -92,25 +99,13 @@ body{
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 11; 
+    z-index: 12; 
     top: 0;
     right: 0;
     background-color: #F5C661; 
     overflow-x: hidden; 
     padding-top: 60px;
     transition: 0.5s;
-}
-.forasidebar{
-    z-index: 11;
-    height: 100%;
-    width: 100%;
-    background-color: transparent;
-    transition: .8s;
-}
-.forasidebar .active{
-    background-color: rgba(3, 3, 3, 0.521);
-    background-blend-mode:multiply;
-    transition: .8s;
 }
 .sidenav a {
     padding: 8px 8px 8px 70px;
@@ -131,6 +126,10 @@ body{
     margin-left: 50px;
     margin-top: 30px;
 }
+#box-produt-cart{
+    border-top: 1px solid #7a247d;
+    border-bottom: 1px solid #7a247d;
+}
 #main {
     transition: margin-left .7s;
     padding: 20px;
@@ -150,7 +149,17 @@ body{
 input[type="text"]:focus {     
     outline:none; 
 }
+#box-carrinho{
+    margin-left: 1.5em;
+    margin-top: 1.5em;
+    font-family: "Bellota Text";
+    font-weight: 700;
+    font-size: 32px;
+    color: #6A066D;
+}
+#box-produt-cart{
 
+}
 /*//////////////////////////////footer////////////////*/
 
 footer{

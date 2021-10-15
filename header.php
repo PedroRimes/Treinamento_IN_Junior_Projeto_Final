@@ -41,6 +41,16 @@
                 </div>
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <div id="box-carrinho">
+                    CARRINHO
+                </div>
+                <div id="box-produt-cart">
+                    ola
+                </div>
+                <div id="totcar">
+                    Total do Carrinho: R$
+                </div>
+                <div id="botcomprar">
+                    COMPRAR
                 </div>
             </div>
             <span onclick="openNav()">

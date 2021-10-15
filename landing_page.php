@@ -1,5 +1,5 @@
 <?php /* Template Name: Pagina principal */ ?>
-
+<div id="opacity"></div>
 <?php get_header(); ?>
     <main>
         <section class="texto_principal">
