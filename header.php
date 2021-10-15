@@ -49,8 +49,8 @@
                 <div id="totcar">
                     Total do Carrinho: R$
                 </div>
-                <div id="botcomprar">
-                    COMPRAR
+                <div class="boxbotcomprar">
+                    <button id="botcomprar">COMPRAR</button>
                 </div>
             </div>
             <span onclick="openNav()">
