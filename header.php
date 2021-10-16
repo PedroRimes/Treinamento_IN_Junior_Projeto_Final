@@ -46,7 +46,9 @@
                     <?php do_action('cart')?>
                 </div>
                 <div class="boxbotcomprar">
-                    <button id="botcomprar" href="http://trabalhofinal.local/checkout/">COMPRAR</button>
+                    <a href="http://trabalhofinal.local/checkout/">
+                        <button id="botcomprar" >COMPRAR</button>
+                    </a>
                 </div>
 
             </div>

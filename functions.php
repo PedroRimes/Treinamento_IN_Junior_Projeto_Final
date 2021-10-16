@@ -13,14 +13,18 @@
                     <div id = 'imagemBonitaCarrinho'>". $_product->get_image() ."</div>
                     <div class = 'produto-info'>
                         <span class='text-left'>" . $_product->get_name() . "</span>
-                        <div class='produto-info2'<span>Quantidade: " . $value['quantity'] . "</span>
-                        " . wc_price($value['line_subtotal']) . "</div>
+                        <div class='quantidade'>
+                            <span> " . $value['quantity'] . "</span>
+                        </div>
                     </div>
+                    <div class='valor-prod'"
+                        . wc_price($value['line_subtotal']) . 
+                    "</div>
                 </div>";
             $total_value += $value['line_subtotal'];                
         }
         if($total_value != 0){
-            echo "<span class='text-left' id = 'precoCarrinho'><br>Total do Carrinho: " . wc_price($total_value) . "</span>";
+            echo "<span id = 'precoCarrinho'><br>Total do Carrinho: " . wc_price($total_value) . "</span>";
         }
     };
     add_action('cart','cb_carrinho');
