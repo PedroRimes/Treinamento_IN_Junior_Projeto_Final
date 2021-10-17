@@ -20,14 +20,17 @@
                 <a href="http://trabalhofinal.local">
                 <img src="<?php echo get_stylesheet_directory_uri() ?>/img/logo.png" width="70" height="50">
                 </a>
-            </div>
+            </div> 
             <div class="caixadepesquisa">
                 <div class="lupinhaetxt">
-                    <form action="<?php echo bloginfo("url");?>/product/" method="get">
-                        <input type="image" src="<?php echo get_stylesheet_directory_uri()?>/img/lupa.png" id="lupa">
-                        <input type="text" name="s" cat="s" placeholder="Pesquisar..." value="<?php echo the_search_query( )?>" id="search" required>
-                        <input type="text" name="post-type" value="product" class="hidden">
-                    </form>
+                <form role="search" method="get" class="woocommerce-product-search" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+                <div class = 'pesquisaHeader'>
+                    <label class="screen-reader-text" for="woocommerce-product-search-field-<?php echo isset( $index ) ? absint( $index ) : 0; ?>"><?php esc_html_e( 'Search for:', 'woocommerce' ); ?></label>
+                    <button id = 'lupaHeader' type="submit" value="<?php echo esc_attr_x( 'Search', 'submit button', 'woocommerce' ); ?>"><img src="<?php echo get_stylesheet_directory_uri() ?>/img/lupa.png" id = 'dentroLupaHeader'></button>
+                    <input id = "search" type="search" id="woocommerce-product-search-field-<?php echo isset( $index ) ? absint( $index ) : 0; ?>" class="search-field" placeholder="Sashimi..." value="<?php echo get_search_query(); ?>" name="s" />
+                    <input class="hidden" type = "hidden" name="post_type" value="product" />
+                </div>
+                </form>
                 </div>
             </div>
         </div>

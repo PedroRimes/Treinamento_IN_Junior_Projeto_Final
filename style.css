@@ -57,6 +57,21 @@ body{
     border: none;
     height: 1em;
 }
+#dentroLupaHeader{
+    height:18.71px;
+    width: 18.71px;
+    margin-right:10px;
+}
+#lupaHeader{
+    background-color:#7A247D;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+}
+input[type="search"]:focus {     
+    outline:none; 
+}
 #search::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #F5C661;
     opacity: 1; /* Firefox */
