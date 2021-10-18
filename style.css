@@ -669,9 +669,32 @@ footer{
 }
 .container_pagina_shop li{
     margin-right: 18px;
+    margin-left: 18px;
 }
 .container_cat_e_texto{
     width: 80%;
     display: flex;
     flex-direction:column;
+}
+.selecione{
+    font-family: 'Bellota Text';
+    font-weight: 400;
+    color: #333333;
+    display: flex;
+    width: 100%;
+}
+.pratos{
+    font-size: 32px;
+}
+.Comida{
+    font-size: 18px;
+}
+.bnome{
+    font-size: 18px;
+}
+.Op{
+    font-size: 18px;
+}
+.filtro{
+    font-size: 18px;
 }

@@ -84,6 +84,27 @@ do_action( 'woocommerce_before_main_content' );
 		
 	</div>
 	</div>
+	<div class="selecione">
+		<div class="pcbo">
+			<div class="pratos">
+				PRATOS
+			</div>
+			<div class="Comida">
+				COMIDA
+				<?php echo $wp_query->get_queried_object()->name; ?>
+			</div>
+			<div class="bnome">
+				Busca por nome:
+				<input	id="search">			
+			</div>
+			<div class="Op">
+				Ordenar por:
+			</div>	
+		</div>
+		<div class="filtro">
+			Filtro de preço:
+		</div>
+	</div>
 	<?php
 	if ( woocommerce_product_loop() ) {
 
