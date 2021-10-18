@@ -16,7 +16,7 @@ Version: 1
     background-color: rgba(0, 0, 0, 0.4);
     z-index:11;
 }
-header{
+.header{
     background-color: #7a247d;
     display: flex;
     justify-content: space-around;
@@ -640,3 +640,18 @@ footer{
     background-color: black;
 }
 
+/*///////////////////////// shop top //////////////////*/
+
+.container_pagina_shop {
+    display: flex;
+    
+}
+.suc{
+    font-family: 'Bellota Text';
+    font-size: 32px;
+    color: #333333;
+    background-color: none;
+}
+.caixa_suc{
+    display: flex;
+}

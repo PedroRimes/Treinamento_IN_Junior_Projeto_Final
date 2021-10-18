@@ -35,7 +35,22 @@
     add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
     
     add_action( 'init', 'bc_remove_wc_breadcrumbs' );
+
     function bc_remove_wc_breadcrumbs() {
         remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
+    }
+
+    remove_action( 'woocommerce_before_shop_loop','woocommerce_result_count',20);
+    remove_action( 'woocommerce_before_shop_loop','woocommerce_catalog_ordering',30);
+
+    add_filter( 'woocommerce_page_title', 'njengah_woocommerce_page_title');
+    function njengah_woocommerce_page_title($page_title) {
+        if($page_title == 'Shop'){
+            return '<div class = "caixa_suc">
+                        <div class="suc"">
+                            SELECIONE UMA CATEGORIA
+                        </div>
+                    </div>';
+        }
     }
 ?>
