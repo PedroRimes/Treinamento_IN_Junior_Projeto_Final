@@ -45,7 +45,45 @@ do_action( 'woocommerce_before_main_content' );
 	?>
 </header>
 <div class="container_pagina_shop">
-	<h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
+	<div class="container_cat_e_texto">
+	<div class="texto_cat">
+		<h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
+	</div>
+	<div class="box-categorias">
+    <?php 
+			$taxonomy     = 'product_cat';
+			$orderby      = 'name';  
+			$show_count   = 0;      // 1 for yes, 0 for no
+			$pad_counts   = 0;      // 1 for yes, 0 for no
+			$hierarchical = 1;      // 1 for yes, 0 for no  
+			$title        = '';  
+			$empty        = 1;
+
+			$args = array(
+					'taxonomy'     => $taxonomy,
+					'orderby'      => $orderby,
+					'show_count'   => $show_count,
+					'pad_counts'   => $pad_counts,
+					'hierarchical' => $hierarchical,
+					'title_li'     => $title,
+					'hide_empty'   => $empty
+			);
+
+			$categories = get_categories($args);
+			if($categories){
+				foreach($categories as $category){
+					$thumbnail_id = get_woocommerce_term_meta($category->term_id, 'thumbnail_id', true);
+					$image = wp_get_attachment_url($thumbnail_id);
+					echo "<div class = 'card-categorias'>
+							<a href = '". get_term_link($category->slug, 'product_cat')."'><img src='{$image}' class='imgcat'></img></a>
+							<p class='nomecat'>{$category->name}</p>
+						</div>";
+				}
+			} 
+		?>
+		
+	</div>
+	</div>
 	<?php
 	if ( woocommerce_product_loop() ) {
 

@@ -644,7 +644,8 @@ footer{
 
 .container_pagina_shop {
     display: flex;
-    
+    flex-direction: column;
+    align-items: center;
 }
 .suc{
     font-family: 'Bellota Text';
@@ -654,4 +655,23 @@ footer{
 }
 .caixa_suc{
     display: flex;
+    flex-direction:flex-start;
+}
+.texto_cat{
+    padding-top: 31px;
+    padding-right: 520px;
+    padding-bottom: 20px;
+}
+.container_pagina_shop > ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.container_pagina_shop li{
+    margin-right: 18px;
+}
+.container_cat_e_texto{
+    width: 80%;
+    display: flex;
+    flex-direction:column;
 }

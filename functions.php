@@ -47,7 +47,7 @@
     function njengah_woocommerce_page_title($page_title) {
         if($page_title == 'Shop'){
             return '<div class = "caixa_suc">
-                        <div class="suc"">
+                        <div class="suc">
                             SELECIONE UMA CATEGORIA
                         </div>
                     </div>';
